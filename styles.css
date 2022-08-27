@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', 'sans-serif';
+}
+body{
+    background-color: aquamarine;
+    /* justify-content: center; */
+    
+}
+.heading {
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heading h1{
+    color: #d13da5;
+    
+}
+.content-wrapper{
+    display: flex;
+    margin: 60px 80px;
+    background-color: #ffffff;
+    /* align-items: center; */
+    border-radius: 30px;
+    /* margin: 2000 px 600 px; */
+}
+.problem-statement{
+    /* border-radius: 5%; */
+    /* margin-top: 60px; */
+    padding-left: 235px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 8vh; 
+    /* background-color: #ffffff;   */
+
+}
+.problem-statement p{
+    color: black;
+    /* cursor: pointer; */
+    word-break: keep-all;
+    display: flex;
+    cursor:context-menu;
+}
+.buttons{
+    /* background-color:aquamarine ; */
+    /* margin-right:270px ;
+    margin-left:70px ;
+    margin-top: 80px; */
+    /* border-radius: 0%; */
+    padding-left: 230px;
+    display: flex;
+    align-items: center;    
+    justify-content: flex-end;
+    /* padding: 40px 180px 20px 180px; */
+    /* background-color: rgb(255, 255, 255); */
+    /* min-height: 10vh;   */
+
+}
+.content-wrapper button{   
+    /* display: flex;
+    align-items: flex-end; */
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding:  4px 9px;
+  border-radius: 30px; 
+  background-color:darkblue;
+  color: white;
+}
+.content-wrapper button:hover{
+
+    
+    background-color:#861414 ;
+    color: rgb(245, 244, 244);
+}
+button.dwell{
+    opacity: 0.5;
+    pointer-events: none;
+    padding: 5px 9px 7px 9px;
+}
+p.dwell{    
+    color: aqua;
+    opacity: 0.5;
+    pointer-events: none;
+}
+button i{
+    color: darkblue;
+}
+button i:hover{
+    color: white;
+}
+/* .problem-statement p:hover{
+    background-color: lightgreen;
+    color: #ffffff;
+} */
+/* .problem-statement:hover{
+    
+    background-color: lightgreen;
+    color: #ffffff;
+} */
