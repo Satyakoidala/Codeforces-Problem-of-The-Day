@@ -13,12 +13,14 @@ body{
 .heading {
     min-height: 30vh;
     display: flex;
+    color: #d13da5;
     align-items: center;
     justify-content: center;
 }
 .heading h1{
     color: #d13da5;
-    
+    align-items: center;
+    justify-content: center;
 }
 .content-wrapper{
     display: flex;
