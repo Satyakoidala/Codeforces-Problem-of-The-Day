@@ -5,7 +5,7 @@ function getNewProblem(){
     newProblemButton.innerText = "loading..";
 
        console.log("Getting new Problem...");
-       let CodeForcesUrl = `https://codeforces.com/problemset/problem/1537/C`;
+       let CodeForcesUrl = `https://codeforces.com/problemset/problem/1492/C`;
     window.open(CodeForcesUrl, "_blank");
        // fetch("https://codeforces.com/api/probelmset.probelms?tags=implementation").then(newProblem => newProblem.json()).then(generatedNewProblem =>{
         // console.log(generatedNewProblem);
