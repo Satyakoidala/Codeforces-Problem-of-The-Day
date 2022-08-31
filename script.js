@@ -6,7 +6,8 @@ function getNewProblem(){
 
        console.log("Getting new Problem...");
     //    let CodeForcesUrl = `https://codeforces.com/problemset/problem/1492/C`;
-       let CodeForcesUrl = `https://codeforces.com/problemset/problem/1498/B`;
+    //    let CodeForcesUrl = `https://codeforces.com/problemset/problem/1498/B`;
+       let CodeForcesUrl = `https://codeforces.com/problemset/problem/1506/D`;
     window.open(CodeForcesUrl, "_blank");
        // fetch("https://codeforces.com/api/probelmset.probelms?tags=implementation").then(newProblem => newProblem.json()).then(generatedNewProblem =>{
         // console.log(generatedNewProblem);
