@@ -1,36 +1,59 @@
-const newProblemButton = document.querySelector("button"),
+const solveButton = document.querySelector("button"),
 problemStatement = document.querySelector(".problem-statement p");
-function getNewProblem(){
-    newProblemButton.classList.add("dwell");
-    newProblemButton.innerText = "loading..";
+
+    
 
        console.log("Getting new Problem...");
-    //    let CodeForcesUrl = `https://codeforces.com/problemset/problem/1492/C`;
-    //    let CodeForcesUrl = `https://codeforces.com/problemset/problem/1498/B`;
-       let CodeForcesUrl = `https://codeforces.com/problemset/problem/1506/D`;
-    window.open(CodeForcesUrl, "_blank");
-       // fetch("https://codeforces.com/api/probelmset.probelms?tags=implementation").then(newProblem => newProblem.json()).then(generatedNewProblem =>{
-        // console.log(generatedNewProblem);
 
 
-        //newProblemButton.innerText = "New Problem";
-        
+       const urlList = [
+        `https://codeforces.com/problemset/problem/1506/D`,
+        `https://codeforces.com/problemset/problem/1520/D`,
 
-    //})
-    newProblemButton.classList.remove("dwell");
+
+       ];
+
+
+
+       const problemList = [
+        "D. Epic Transformation",
+        "D. Same Differences"
+
+       ];
+
+       
+      var previousIndex;
+      const index = Math.floor(Math.random() * problemList.length);
+      let now = new Date();
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let seconds = now.getSeconds();
+      var previousDate = 1;
+      var currentDate = now.getDate();
+      
+      //if(hour == 12 && minute == 0 && seconds == 0)
+      if(currentDate != previousDate)
+      {
+            if(index == previousIndex)
+            {
+                index = (index + 1) % problemList.length;
+            }
+            problemStatement.innerText = problemList[index];
+            var CodeForcesUrl = urlList[index]
+            previousIndex = index;
+            previousDate = currentDate;
+      }
+    
+
 
 
        
-}
-function enterIntoTheProblem(){
-    problemStatement.classList.add("dwell");
-    problemStatement.innerText = "Taking you to CodeForces..";
-    console.log("Entering into CodeForces...");
-    problemStatement.classList.remove("dwell");
+
+function enterIntoTheProblem(){ 
+window.open(CodeForcesUrl, "_blank");                   
+console.log("Entering into CodeForces...");
 }
 
 
+solveButton.addEventListener("click", enterIntoTheProblem);
 
-newProblemButton.addEventListener("click", getNewProblem);
-//newProblemButton.addEventListener("click", getNewProblem);
-// problemStatement.addEventListener("click", enterIntoTheProblem);
