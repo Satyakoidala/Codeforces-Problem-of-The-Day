@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow&family=PT+Sans&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;400&family=PT+Sans&display=swap');
 
 * {
     margin: 0;
@@ -46,7 +47,7 @@ body {
     justify-content: left;
     min-height: 8vh;
     /* background-color: #ffffff;   */
-    
+
 
 }
 
@@ -70,7 +71,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
+
     /* padding: 40px 180px 20px 180px; */
     /* background-color: rgb(255, 255, 255); */
     /* min-height: 10vh;   */
@@ -343,5 +344,27 @@ button i:hover {
 @media only screen and (max-width: 520px) {
     #divo {
         margin-left: -50px;
+    }
+}
+
+/* Visitors counter */
+#visitors {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 30px;
+}
+
+#visitors>span {
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+    #visitors {
+        bottom: 20px;
+        top: unset;
     }
 }
