@@ -1,5 +1,9 @@
-const solveButton = document.querySelector("button")
+const solveButton = document.getElementById("solve-button")
 const problemStatement = document.querySelector(".problem-statement");
+const filterInput = document.getElementById("filter-rating");
+const contestId = document.getElementById("contestID");
+const problemID = document.getElementById("problemID");
+const problemRating = document.getElementById("problem-rating");
 
 
 
@@ -24,40 +28,95 @@ function hasOneDayPassed() {
 	return true;
 }
 
+/**
+ * It fetches the data from the codeforces api and returns the problems.
+ * @returns An array of objects.
+ */
+async function fetchCodeforcesProblemData() {
+	// using codeforces api to fetch problems
+	const response = await fetch('https://codeforces.com/api/problemset.problems');
+	const data = await response.json();
+
+	return data.result.problems;
+}
+
+/**
+ * It takes a list of problems and returns a random problem from the list
+ * @param problemList - an array of objects, each object contains the following properties:
+ * @returns The selected problem is being returned.
+ */
+function getOneProblem(problemList) {
+	const index = Math.floor(Math.random() * problemList.length);
+	const selectedProblem = problemList[index];
+
+	if (selectedProblem !== {} && selectedProblem !== undefined) {
+		// using localStorage to store the selected problem
+		localStorage.selectedProblem = JSON.stringify(selectedProblem);
+
+		// codeforces link is created and stored
+		problemURL = `https://codeforces.com/problemset/problem/${selectedProblem.contestId}/${selectedProblem.index}`;
+	}
+
+	return selectedProblem;
+}
+
+/**
+ * It updates the HTML elements on the page with the data from the selected problem.
+ * @param selectedProblem - The problem object that is selected from the list of problems.
+ */
+function updateHTML(selectedProblem) {
+	if (selectedProblem !== {} && selectedProblem !== undefined) {
+		// Updating the problem statement and problem details on the page
+		problemStatement.innerText = selectedProblem.name;
+		contestId.innerText = `- ${selectedProblem.contestId}`;
+		problemID.innerText = `- ${selectedProblem.index}`;
+		problemRating.innerText = `- ${selectedProblem.rating}`;
+
+		problemURL = `https://codeforces.com/problemset/problem/${selectedProblem.contestId}/${selectedProblem.index}`;
+	}
+}
+
+async function updateProblemByRating() {
+	// fetching input from filter
+	const filterRating = Number(filterInput.value);
+
+	// obtaining problem for the day from the list of problems
+	const problemList = await fetchCodeforcesProblemData();
+
+	// filtering problems based on rating
+	const filterProblemsList = problemList.filter(item => item.rating === filterRating);
+
+	// selecting a problem the list
+	const selectedProblem = getOneProblem(filterProblemsList);
+
+	updateHTML(selectedProblem);
+
+	// clearing filter input
+	filterInput.value = null;
+
+	console.log(selectedProblem);
+}
+
 
 async function updateProblem() {
 	// checking if old problem data is existing, if exists display it.
 	if (localStorage.selectedProblem) {
 		// parsing object data from localstorage
-		const selectedProblem = JSON.parse(localStorage.selectedProblem);
+		const selectedProblem = localStorage.selectedProblem == undefined ? {} : JSON.parse(localStorage.selectedProblem);
 
-		// re-taking the same steps to represent problem object
-		const htmlText = `${selectedProblem.contestId}. ${selectedProblem.index}. ${selectedProblem.name}`;
-		problemStatement.innerText = htmlText;
-		problemURL = `https://codeforces.com/problemset/problem/${selectedProblem.contestId}/${selectedProblem.index}`;
+		updateHTML(selectedProblem);
 	}
 
 	// checking one day condition, if this check passes the new problem is fetched.
 	if (!hasOneDayPassed()) return false;
 
-	// using codeforces api to fetch problems
-	const response = await fetch('https://codeforces.com/api/problemset.problems');
-	const data = await response.json();
-
 	// obtaining problem for the day from the list of problems
-	const problemList = data.result.problems;
-	const index = Math.floor(Math.random() * problemList.length);
-	const selectedProblem = problemList[index];
+	const problemList = await fetchCodeforcesProblemData();
 
-	// using localStorage to store the selected problem
-	localStorage.selectedProblem = JSON.stringify(selectedProblem);
+	// selecting a problem the list
+	const selectedProblem = getOneProblem(problemList);
 
-	// codeforces link is created and stored
-	problemURL = `https://codeforces.com/problemset/problem/${selectedProblem.contestId}/${selectedProblem.index}`;
-
-	// creating htmlText and updating the problem statement on the page
-	const htmlText = `${selectedProblem.contestId}. ${selectedProblem.index}. ${selectedProblem.name}`;
-	problemStatement.innerText = htmlText;
+	updateHTML(selectedProblem);
 
 	// console the problem details on every new problem fetch
 	console.log(selectedProblem);
@@ -72,6 +131,6 @@ setInterval(updateProblem, 60000);
 function enterIntoTheProblem() {
 	window.open(problemURL, "_blank");
 }
-
+1
 solveButton.addEventListener("click", enterIntoTheProblem);
 

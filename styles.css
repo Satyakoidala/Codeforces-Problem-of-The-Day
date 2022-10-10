@@ -29,12 +29,47 @@ body {
 
 .content-wrapper {
     display: flex;
-    margin: 60px 80px;
-
+    margin: 10px 80px;
     background-color: #ffffff;
     /* align-items: center; */
     border-radius: 30px;
     /* margin: 2000 px 600 px; */
+}
+
+.filter-button {
+	border-radius: 3px;
+	padding: 0 1px;
+}
+
+.filter-problems {
+	display: flex;
+	margin-top: 15px;
+	justify-content: center;
+	align-items: center;
+}
+
+.filter-problems div {
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+.filter-problems form {
+	display: flex;
+	justify-content: space-between;
+}
+
+input[type=number] {
+	width: 70%;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.problem-details {
+	display: flex;
+	justify-content: space-around;
+	padding: 5px;
+	margin: 10px 0
 }
 
 .problem-statement {
@@ -216,7 +251,7 @@ button i:hover {
 
     .content-wrapper {
         display: flex;
-        margin: 60px 80px;
+        margin: 10px 80px;
         background-color: #ffffff;
         /* align-items: center; */
         min-width: fit-content;
