@@ -68,9 +68,9 @@ function updateHTML(selectedProblem) {
 	if (selectedProblem !== {} && selectedProblem !== undefined) {
 		// Updating the problem statement and problem details on the page
 		problemStatement.innerText = selectedProblem.name;
-		contestId.innerText = `- ${selectedProblem.contestId}`;
-		problemID.innerText = `- ${selectedProblem.index}`;
-		problemRating.innerText = `- ${selectedProblem.rating}`;
+		contestId.innerText = selectedProblem.contestId;
+		problemID.innerText = selectedProblem.index;
+		problemRating.innerText = selectedProblem.rating;
 
 		problemURL = `https://codeforces.com/problemset/problem/${selectedProblem.contestId}/${selectedProblem.index}`;
 	}
