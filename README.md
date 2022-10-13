@@ -8,7 +8,7 @@
 ![image](https://user-images.githubusercontent.com/84634405/195651689-640ef541-8ebd-4d75-a6a3-94654b7fffea.png)
 
 ## Click on the solve button to go to the probem
-![image](https://user-images.githubusercontent.com/84634405/195651831-2ac777b3-4a94-4832-a543-16c1b2dff0d5.png)
+![image](https://user-images.githubusercontent.com/84634405/195653564-a0eeda04-302b-4daa-abca-3bb210bd4bd4.png)
 
 ## solve the problem
-![image](https://user-images.githubusercontent.com/84634405/187019223-6c10b15f-1042-41a8-bf8a-6e91a1040293.png)
+![image](https://user-images.githubusercontent.com/84634405/195653582-28de27f8-0188-4895-aaf7-63d6dcfc0206.png)
