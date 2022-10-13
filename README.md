@@ -1,5 +1,8 @@
 ﻿# Codeforces-Problem-of-The-Day
  ## [live site](https://codeforces-probem-of-the-day.netlify.app/)
+ ## Responsive across all the devices
+
+![resp](https://user-images.githubusercontent.com/84634405/195657435-573cfab6-b954-48ee-b9ff-9bdc62d29a07.png)
  ## Gives a new problem everyday
 
 ![image](https://user-images.githubusercontent.com/84634405/195651847-10863575-5363-41cd-bcd3-d2afa9db379a.png)
@@ -12,9 +15,4 @@
 
 ## solve the problem
 ![image](https://user-images.githubusercontent.com/84634405/195653582-28de27f8-0188-4895-aaf7-63d6dcfc0206.png)
-## Responsive across all the devices
 
-![921f701f-362e-46b8-a105-0467277e29c9](https://user-images.githubusercontent.com/84634405/195655176-8a329007-9451-4281-a800-226669919b80.jpg)
-![e26dd6cb-5ec2-425d-b615-1b4f3fbb934f](https://user-images.githubusercontent.com/84634405/195655233-1a52489c-00ee-46aa-af2a-0ca07dafa7e6.jpg)
-![6847c663-071d-4aa9-8255-c61288e07996](https://user-images.githubusercontent.com/84634405/195655277-68bc95e7-a5bc-4008-bc0e-74705e4d390e.jpg)
-![2c2d3f42-ff7e-436c-a6cc-fa7fa88c477e](https://user-images.githubusercontent.com/84634405/195655295-f16e9a95-d19e-456d-9fba-3905bd33fa62.jpg)
