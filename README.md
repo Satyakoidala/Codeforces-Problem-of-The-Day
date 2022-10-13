@@ -14,4 +14,6 @@
 ![image](https://user-images.githubusercontent.com/84634405/195653582-28de27f8-0188-4895-aaf7-63d6dcfc0206.png)
 ## Responsive across all the devices
 ![image](https://user-images.githubusercontent.com/84634405/195653934-b0209610-6ff7-4053-850a-a10ec8f6fcd4.png)
+![image](https://user-images.githubusercontent.com/84634405/195654189-d682c7c3-29b4-4ffc-9601-fe26d82665d1.png)
+
 ![image](https://user-images.githubusercontent.com/84634405/195653944-d1c3e138-bc66-4b82-bfe2-d8c8bae400a4.png)
